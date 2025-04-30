@@ -17,7 +17,7 @@ api_token = os.getenv('HUG_TOKEN')
 login(api_token)
 
 # Optional: ensure ffmpeg is on PATH (for audio playback on Windows)
-os.environ["PATH"] += os.pathsep + r"C:\Users\HP PAVILLION\Downloads\ffmpeg-7.1.1-essentials_build\ffmpeg-7.1.1-essentials_build\bin"
+os.environ["PATH"] += os.pathsep + r"C:\Users\irisa\Downloads\ffmpeg-7.1.1-essentials_build\bin"
 
 # Load Whisper model for Kinyarwanda transcription
 asr_model = WhisperForConditionalGeneration.from_pretrained("mbazaNLP/Whisper-Small-Kinyarwanda")
