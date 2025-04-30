@@ -14,6 +14,7 @@ output_dir = "audio_qa"
 os.makedirs(output_dir, exist_ok=True)
 
 for i, (question, answer) in enumerate(qa_pairs.items(), 1):
+    # Generate TTS
     tts_q = gTTS(text=question, lang='rw')
     tts_a = gTTS(text=answer, lang='rw')
 
@@ -23,17 +24,18 @@ for i, (question, answer) in enumerate(qa_pairs.items(), 1):
     wav_q = os.path.join(output_dir, f"question_{i}.wav")
     wav_a = os.path.join(output_dir, f"answer_{i}.wav")
 
+    # Save MP3
     tts_q.save(mp3_q)
     tts_a.save(mp3_a)
 
-    # Convert to WAV
+    # Convert MP3 to WAV
     sound_q = AudioSegment.from_mp3(mp3_q)
     sound_a = AudioSegment.from_mp3(mp3_a)
 
     sound_q.export(wav_q, format="wav")
     sound_a.export(wav_a, format="wav")
 
-    # Optionally remove mp3 to clean up
+    # Clean up MP3 files
     os.remove(mp3_q)
     os.remove(mp3_a)
 
