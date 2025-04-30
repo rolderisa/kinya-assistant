@@ -4,13 +4,9 @@ A lightweight voice assistant that listens to Kinyarwanda speech, transcribes it
 
 🎯 Features
 🎙️ Speech-to-text transcription in Kinyarwanda using mbazaNLP/Whisper-Small-Kinyarwanda.
-
 🔊 Text-to-speech synthesis with facebook/mms-tts-kin.
-
 🤖 Predefined question-answer matching.
-
 📁 Batch processing of .wav files.
-
 🪄 Automatic audio playback on Windows.​
 
 📂 Project Structure

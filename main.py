@@ -17,7 +17,7 @@ api_token = os.getenv('HUG_TOKEN')
 login(api_token)
 
 # Optional: ensure ffmpeg is on PATH (for audio playback on Windows)
-os.environ["PATH"] += os.pathsep + r"C:\Users\irisa\Downloads\ffmpeg-7.1.1-essentials_build\bin"
+os.environ["PATH"] += os.pathsep + r"C:\Users\irisa\Downloads\ffmpeg-2025-04-23-git-25b0a8e295-essentials_build\bin"
 
 # Load Whisper model for Kinyarwanda transcription
 asr_model = WhisperForConditionalGeneration.from_pretrained("mbazaNLP/Whisper-Small-Kinyarwanda")
@@ -30,9 +30,9 @@ tts_tokenizer = VitsTokenizer.from_pretrained("facebook/mms-tts-kin")
 # Define question-answer pairs
 qa_pairs = {
     "amakuru": "Ni meza, urakoze!",
-    "witwa nde": "Nitwa Umuhire",
-    "ubuzima bumeze gute": "Bumeze neza!",
-    "ikinyarwanda ni iki": "Ni ururimi kavukire rw'Abanyarwanda.",
+    "witwa nde": "Nitwa Uwihaye",
+    "Rwanda Coding Academy iherereye he?": "Iherereye mu Karere ka Nyabihu, mu Ntara y’Iburengerazuba.",
+    "Ikipe y'igihugu y’u Rwanda yitwa nde?": "Ni Amavubi.",
     "amakuru yawe": "Ni meza, ndashimira!"
 }
 
