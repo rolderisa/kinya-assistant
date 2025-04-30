@@ -14,9 +14,7 @@ A lightweight voice assistant that listens to Kinyarwanda speech, transcribes it
 🪄 Automatic audio playback on Windows.​
 
 📂 Project Structure
-bash
-Copy
-Edit
+
 
 Kin_voice_assistant/
 ├── audio/               # Input .wav files
@@ -27,32 +25,23 @@ Kin_voice_assistant/
 ⚙️ Setup Instructions
 Clone the Repository
 
-bash
-Copy
-Edit
-git clone https://github.com/rolderisa/Library-Management-System.git
+
+git clone https://github.com/rolderisa/Kinya-assistant.git
 cd Kin_voice_assistant
 Create and Activate a Virtual Environment
 
-bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate  # On Windows
 source venv/bin/activate  # On Unix or MacOS
 Install Dependencies
 
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
 Set Up Environment Variables
 
 Create a .env file in the root directory and add your Hugging Face token:
 
-ini
-Copy
-Edit
+
 HUG_TOKEN=your_huggingface_token_here
 Ensure FFmpeg is Installed
 
@@ -65,10 +54,8 @@ Place your .wav files in the audio/ directory. Ensure they are clear recordings 
 
 Run the Assistant
 
-bash
-Copy
-Edit
-python gen.py
+
+python main.py
 View Outputs
 
 The transcribed text and corresponding responses will be displayed in the console. Synthesized answer audio files will be saved in the outputs/ directory and played automatically.
